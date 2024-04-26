@@ -210,4 +210,8 @@ Discuss how the system is designed for ease of maintenance.
 
 ### 8.1 Revision History
 
-Document the revision history of this document.
+### Revision History
+
+| Date       | Version | Description of Changes              | Author |
+|------------|---------|------------------------------------|--------|
+| 2024-04-26 | 1.0     | Initial draft of document          | @minierparedes    |
