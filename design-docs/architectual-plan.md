@@ -214,4 +214,4 @@ Discuss how the system is designed for ease of maintenance.
 
 | Date       | Version | Description of Changes              | Author |
 |------------|---------|------------------------------------|--------|
-| 2024-04-26 | 1.0     | Initial draft of document          | `@minierparedes`    |
+| 2024-04-26 | 1.0     | Initial draft of document          | [minierparedes](https://github.com/minierparedes)   |
