@@ -153,7 +153,32 @@ The Frog Blossom CMS application adopts several key architectural strategies to 
 
 ### 6.1 Overview of Layers/Modules
 
-Provide an overview of the system's layers or modules.
+The Frog Blossom CMS application is structured using Clean Architecture principles the following is an overview of the system's layers/modules:
+
+1. **Entities Layer**:
+   - The Entities layer represents the core domain models and business entities of the system.
+   - Entities encapsulate the essential data and behavior of the application, defining the fundamental building blocks of the domain.
+   - Examples of entities include User, ContentItem, Category, Tag, MediaFile, etc.
+
+2. **Use Cases Layer**:
+   - The Use Cases layer contains the application's business logic and use cases, representing the operations and workflows performed by the system.
+   - Use cases orchestrate interactions between entities and interface adapters to fulfill user requests and achieve system objectives.
+   - Use cases are independent of external dependencies and infrastructure details, ensuring flexibility and testability.
+   - Examples of use cases include CreateContent, EditContent, PublishContent, DeleteContent, AuthenticateUser, AuthorizeUser, etc.
+
+3. **Interface Adapters Layer**:
+   - The Interface Adapters layer serves as a bridge between the application's core business logic and external interfaces, such as the user interface (UI), databases, and third-party services.
+   - Interface adapters translate data and requests between different formats and protocols, ensuring compatibility and interoperability.
+   - Interface adapters include presenters, controllers, gateways, repositories, and data mappers.
+   - Examples of interface adapters include REST API controllers, database repositories, authentication gateways, view models, etc.
+
+4. **Frameworks/Drivers Layer**:
+   - The Frameworks/Drivers layer represents external frameworks, libraries, and infrastructure components used by the application.
+   - Frameworks and drivers provide essential services and resources needed to run the application, such as web servers, databases, logging frameworks, authentication libraries, etc.
+   - Frameworks/drivers encapsulate implementation details and infrastructure dependencies, allowing the application to remain agnostic to specific technologies.
+   - Examples of frameworks/drivers include Spring Boot, Hibernate, PostgreSQL, Docker, Kubernetes, etc.
+
+The modular architecture of the Frog Blossom CMS application facilitates loose coupling, high cohesion, and ease of maintenance. Each layer/module has well-defined responsibilities and dependencies, enabling independent development, testing, and deployment of components.
 
 ### 6.2 Component Diagrams
 
