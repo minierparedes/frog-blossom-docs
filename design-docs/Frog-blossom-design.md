@@ -45,31 +45,31 @@ The frog-blossom CMS will follow a microservice architecture, with a single back
 ## 6. Data Model
 
 ### 6.1 User
-- username: String (required)
-- email: String (required)
-- password: String (required, hashed)
-- role: String (default: "user" or "admin")
+- `username: String (required)`
+- `email: String (required)`
+- `password: String (required, hashed)`
+- `role: String (default: "user" or "admin")`
 
 ### 6.2 Article
-- title: String (required)
-- content: String (required)
-- author: ObjectId (referring to User)
-- createdAt: Date (default: current timestamp)
-- updatedAt: Date
+- `title: String (required)`
+- `content: String (required)`
+- `author: ObjectId (referring to User)`
+- `createdAt: Date (default: current timestamp)`
+- `updatedAt: Date`
 
 ## 7. Technical Specifications
 
-- Backend: GO v1.22, PostgresSQL v15
-- Frontend: Nuxtjs v3.11.2, sass v1.75.0, Express v4.19.2
+- Backend: `GO v1.22, PostgresSQL v15`
+- Frontend: `Nuxtjs v3.11.2, sass v1.75.0, Express v4.19.2`
 
 ## 8. API Specifications
 
-- POST /api/auth/register
-- POST /api/auth/login
-- GET /api/auth/user (protected)
-- POST /api/articles (protected)
-- PUT /api/articles/:id (protected)
-- DELETE /api/articles/:id (protected)
+- `POST /api/auth/register`
+- `POST /api/auth/login`
+- `GET /api/auth/user (protected)`
+- `POST /api/articles (protected)`
+- `PUT /api/articles/:id (protected)`
+- `DELETE /api/articles/:id (protected)`
 
 ## 9. Security Considerations
 
