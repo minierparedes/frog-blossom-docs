@@ -19,10 +19,10 @@ The frog-blossom CMS will follow a Clean architecture microservice, with a singl
 - Admin users should manage user accounts (CRUD operations).
 
 ### 3.2 Content Management
-- Authenticated users should create new articles.
-- Authenticated users should edit existing articles.
-- Authenticated users should delete articles they own.
-- Admin users should to manage all articles (CRUD operations).
+- Authenticated users should create new content.
+- Authenticated users should edit existing content.
+- Authenticated users should delete content they own.
+- Admin users should to manage all content (CRUD operations).
 
 ## 4. Non-Functional Requirements
 
