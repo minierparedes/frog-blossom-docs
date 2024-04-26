@@ -196,8 +196,6 @@ Include any relevant component diagrams that illustrate significant parts of the
 
 ### 6.3 Database Design
 
-The database design for the Frog Blossom CMS is structured to efficiently store and manage various types of content, user data, and system configurations. The design aims to ensure data integrity, scalability, and performance while accommodating the dynamic nature of content management.
-
 #### Database Tables
 
 1. **Users Table**:
