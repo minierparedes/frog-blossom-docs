@@ -70,15 +70,60 @@ Dev team:
 - [sharray2918](https://github.com/sharray2918)
 - [minierparedes](https://github.com/minierparedes)
 
-### 3.2 System Concerns
-
-Describe the concerns of the system, such as performance, scalability, and security.
-
 ## 4. System Overview
 
 ### 4.1 High-Level Description
 
-Provide a high-level description of the system's functionality and components.
+The Frog Blossom CMS is a content management system designed to empower users to create, manage, and publish digital content effectively.
+
+At its core, the system provides a user-friendly interface for content creation, organization, and publication, catering to the needs of content creators, editors, administrators, and website visitors.
+
+#### Functionality
+
+1. **Content Creation and Editing**:
+   - Users can create various types of content, including articles, blog posts, pages, and multimedia content.
+   - Content creation interfaces support rich text formatting, media embedding, and metadata management.
+
+2. **Content Management**:
+   - Content is organized using categories, tags, and custom taxonomies for easy navigation and retrieval.
+   - Users can search, filter, and sort content based on criteria such as publication date, author, and topic.
+
+3. **Media Management**:
+   - Users can upload, store, and manage media files, such as images, videos, and documents, within the system.
+   - Media files can be embedded into content and reused across multiple pages or posts.
+
+4. **Version Control and Revision History**:
+   - The system maintains a revision history of content changes, allowing users to track and revert to previous versions if needed.
+   - Version control mechanisms ensure data integrity and facilitate collaboration among multiple users.
+
+5. **Publishing Workflow**:
+   - Users can schedule content publication, preview changes before publishing, and collaborate on content creation and review.
+   - Role-based access control allows administrators to define user roles and permissions for content publishing and management.
+
+6. **User Management**:
+   - The system supports user registration, authentication, and role-based access control, allowing administrators to manage user accounts and permissions.
+
+7. **SEO Optimization**:
+   - Users can optimize content for search engines by setting metadata, such as titles, descriptions, and keywords, for each piece of content.
+   - Clean URLs, canonical tags, and SEO-friendly markup are employed to improve search engine rankings and visibility.
+
+#### Components
+
+1. **Frontend**:
+   - The frontend component provides an interface for interacting with the CMS, allowing users to create, edit, and manage content.
+
+2. **Backend**:
+   - The backend component implements the core business logic of the CMS, including content management, user authentication, and access control.
+
+3. **Database**:
+   - The database component stores and manages content data, user information, and system configurations.
+
+4. **Media Storage**:
+   - Media files uploaded by users are stored in a dedicated storage component, such as a file system or cloud storage service, for efficient retrieval and management.
+
+5. **Search Engine**:
+   - A search engine component indexes and searches content to provide users with fast and relevant search results.
+   - Full-text search capabilities and faceted search options may be implemented to enhance search functionality.
 
 ## 5. Architectural Strategies
 
@@ -100,50 +145,26 @@ Include any relevant component diagrams that illustrate significant parts of the
 
 Outline the database design and structure.
 
-## 7. Key Architectural Decisions
+## 7. Quality Attributes
 
-### 7.1 Decision Log
-
-Record key architectural decisions made and the rationale behind them.
-
-## 8. Quality Attributes
-
-### 8.1 Performance
+### 7.1 Performance
 
 Describe the performance requirements and how the architecture supports them.
 
-### 8.2 Scalability
+### 7.2 Scalability
 
 Discuss scalability considerations and strategies.
 
-### 8.3 Security
+### 7.3 Security
 
 Outline the security measures and considerations within the architecture.
 
-### 8.4 Maintainability
+### 7.4 Maintainability
 
 Discuss how the system is designed for ease of maintenance.
 
-## 9. Risks and Technical Debt
+## 8. Appendices
 
-### 9.1 Identified Risks
-
-List any identified risks and their potential impact on the project.
-
-### 9.2 Technical Debt
-
-Discuss any areas of technical debt and plans for resolution.
-
-## 10. Appendices
-
-### 10.1 Glossary
-
-Provide a glossary of terms used throughout the document.
-
-### 10.2 Index
-
-Include an index of terms and sections for easy navigation.
-
-### 10.3 Revision History
+### 8.1 Revision History
 
 Document the revision history of this document.
