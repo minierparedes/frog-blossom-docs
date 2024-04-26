@@ -131,6 +131,10 @@ At its core, the system provides a user-friendly interface for content creation,
 
 The Frog Blossom CMS application adopts several key architectural strategies to address specific stakeholder concerns and achieve the desired system objectives.
 
+- Frontend: Nuxt, expressjs, css, sass
+- Backend: GO, Docker
+- Database: Postgressql
+
 1. **Modularization and Separation of Concerns**:
    - **Strategy**: The system is designed using Clean Architecture principles, which promote modularization and separation of concerns. Each component of the system (Entities, Use Cases, Interface Adapters, and Frameworks/Drivers) has well-defined responsibilities and boundaries, allowing for easy maintenance, scalability, and testability.
    - **Addressing Stakeholder Concerns**:
@@ -152,6 +156,12 @@ The Frog Blossom CMS application adopts several key architectural strategies to 
 ## 6. System Architecture
 
 ### 6.1 Overview of Layers/Modules
+
+Front-End Layer: Handles the user interface and client-side logic.
+Back-End Layer: Manages server-side logic, API requests, and database interactions.
+Database Layer: Stores and retrieves all application data.
+
+### Backend
 
 The Frog Blossom CMS application is structured using Clean Architecture principles the following is an overview of the system's layers/modules:
 
