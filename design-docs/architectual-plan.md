@@ -196,7 +196,63 @@ Include any relevant component diagrams that illustrate significant parts of the
 
 ### 6.3 Database Design
 
-Outline the database design and structure.
+The database design for the Frog Blossom CMS is structured to efficiently store and manage various types of content, user data, and system configurations. The design aims to ensure data integrity, scalability, and performance while accommodating the dynamic nature of content management.
+
+#### Database Tables
+
+1. **Users Table**:
+   - Stores user information such as username, email, password (hashed), role, and permissions.
+   - Primary Key: user_id
+
+2. **Content Table**:
+   - Contains details about content items such as articles, blog posts, pages, etc.
+   - Includes fields for title, content body, author, publication date, status (draft/published), category, tags, etc.
+   - Primary Key: content_id
+   - Foreign Key: author_id (references Users table)
+
+3. **Categories Table**:
+   - Stores categories for organizing content.
+   - Includes fields for category name and description.
+   - Primary Key: category_id
+
+4. **Tags Table**:
+   - Stores tags associated with content items.
+   - Includes fields for tag name and description.
+   - Primary Key: tag_id
+
+5. **Media Files Table**:
+   - Stores metadata about uploaded media files (images, videos, documents, etc.).
+   - Includes fields for file name, file type, file size, upload date, etc.
+   - Primary Key: media_id
+
+6. **Content-Category Mapping Table**:
+   - Represents a many-to-many relationship between content items and categories.
+   - Associates content items with one or more categories.
+   - Foreign Keys: content_id (references Content table), category_id (references Categories table)
+
+7. **Content-Tag Mapping Table**:
+   - Represents a many-to-many relationship between content items and tags.
+   - Associates content items with one or more tags.
+   - Foreign Keys: content_id (references Content table), tag_id (references Tags table)
+
+#### Database Relationships
+
+- One-to-Many Relationship:
+  - Users can have multiple content items (articles, blog posts, etc.).
+  - Categories can have multiple content items.
+  - Tags can be associated with multiple content items.
+- Many-to-Many Relationship:
+  - Content items can belong to multiple categories.
+  - Content items can have multiple tags.
+
+#### Database Indexes
+
+- Indexes can be added on frequently queried columns such as username, email, category name, tag name, etc., to optimize query performance.
+
+#### Database Constraints
+
+- Foreign key constraints ensure data integrity by enforcing referential integrity between related tables.
+- Check constraints can be applied to ensure data validity and consistency (e.g., ensuring publication date is not in the future).
 
 ## 7. Quality Attributes
 
