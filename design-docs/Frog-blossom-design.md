@@ -8,21 +8,21 @@ Development for frog-blossom content management system (CMS) for managing articl
 
 ## 2. Architectural Overview
 
-The frog-blossom CMS will follow a DDD microservice architecture, with a single backend server responsible for handling HTTP requests, managing data storage, and serving content to users. The frontend will be implemented using Nuxtjs.
+The frog-blossom CMS will follow a Clean architecture microservice, with a single backend server responsible for handling HTTP requests, managing data storage, and serving content to users. The frontend will be implemented using Nuxtjs.
 
 ## 3. Functional Requirements
 
 ### 3.1 User Management
-- Users should to register new accounts.
-- Users should to log in to their accounts.
-- Users should to update their profile information.
+- Users should register new accounts.
+- Users should log in to their accounts.
+- Users should update their profile information.
 - Admin users should manage user accounts (CRUD operations).
 
 ### 3.2 Content Management
-- Authenticated users should create new articles.
-- Authenticated users should edit existing articles.
-- Authenticated users should delete articles they own.
-- Admin users should to manage all articles (CRUD operations).
+- Authenticated users should create new content.
+- Authenticated users should edit existing content.
+- Authenticated users should delete content they own.
+- Admin users should to manage all content (CRUD operations).
 
 ## 4. Non-Functional Requirements
 
