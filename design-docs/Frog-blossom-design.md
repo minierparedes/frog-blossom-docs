@@ -8,7 +8,7 @@ Development for frog-blossom content management system (CMS) for managing articl
 
 ## 2. Architectural Overview
 
-The frog-blossom CMS will follow a microservice architecture, with a single backend server responsible for handling HTTP requests, managing data storage, and serving content to users. The frontend will be implemented using Nuxtjs.
+The frog-blossom CMS will follow a DDD microservice architecture, with a single backend server responsible for handling HTTP requests, managing data storage, and serving content to users. The frontend will be implemented using Nuxtjs.
 
 ## 3. Functional Requirements
 
