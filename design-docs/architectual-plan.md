@@ -152,7 +152,11 @@ The Frog Blossom CMS application is structured using Clean Architecture principl
 The modular architecture of the Frog Blossom CMS application facilitates loose coupling, high cohesion, and ease of maintenance. Each layer/module has well-defined responsibilities and dependencies, enabling independent development, testing, and deployment of components.
 
 ### 6.2 Component Diagrams
-![User & Content ERD](/.eraser/toYCWH32PtHug7boDCpu___mfsybget2bYmZJj1SMRIdLoEljx1___---figure---6BQ_d_Ttoyr9hgubw2jSO---figure---yOejCB0gx-dBYH7c36MHpQ.png "User & Content ERD")
+
+
+
+
+[﻿View on canvas](https://app.eraser.io/workspace/toYCWH32PtHug7boDCpu?elements=uLJZYCk-993brxu0T6YIeQ) 
 
 ### 6.3 Database Design
 #### Database Tables
