@@ -53,3 +53,8 @@
     - Users should be able to set metadata, such as titles, descriptions, and keywords, for each piece of content.
     - Content URLs should be customizable and SEO-friendly, with support for clean permalinks.
 
+### Revision History
+
+| Date       | Version | Description of Changes              | Author |
+|------------|---------|------------------------------------|--------|
+| 2024-04-26 | 1.0     | Initial draft of document          | @minierparedes    |

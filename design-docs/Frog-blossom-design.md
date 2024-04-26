@@ -88,3 +88,9 @@ The frog-blossom CMS will follow a Clean architecture microservice, with a singl
 - Integration tests will be for the frontend and backend components.
 
 ---
+
+### Revision History
+
+| Date       | Version | Description of Changes              | Author |
+|------------|---------|------------------------------------|--------|
+| 2024-04-26 | 1.0     | Initial draft of document          | @minierparedes    |

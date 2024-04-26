@@ -7,3 +7,9 @@
 1. [Application requirements](/frog-blossom-cms/application-requirements.md)
 2. [Design document](/design-docs/Frog-blossom-design.md)
 3. [Architectual plan](/design-docs/architectual-plan.md)
+
+### Revision History
+
+| Date       | Version | Description of Changes              | Author |
+|------------|---------|------------------------------------|--------|
+| 2024-04-26 | 1.0     | Initial draft of document          | @minierparedes    |
