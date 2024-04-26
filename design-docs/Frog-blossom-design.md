@@ -13,9 +13,9 @@ The frog-blossom CMS will follow a Clean architecture microservice, with a singl
 ## 3. Functional Requirements
 
 ### 3.1 User Management
-- Users should to register new accounts.
-- Users should to log in to their accounts.
-- Users should to update their profile information.
+- Users should register new accounts.
+- Users should log in to their accounts.
+- Users should update their profile information.
 - Admin users should manage user accounts (CRUD operations).
 
 ### 3.2 Content Management
