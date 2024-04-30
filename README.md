@@ -1,5 +1,7 @@
 # Frog Blossom CMS
 
+<img src="image.png" alt="frog-blossom" style="display:block; margin:auto; width:50%;">
+
 web-based platform that allows users to create, manage, and publish digital content without needing extensive technical knowledge.
 Users can create and edit content through a user-friendly interface, and the system manages the storage, retrieval, and presentation of content on the website.
 
