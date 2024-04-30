@@ -116,3 +116,4 @@ Go application following the Hexagonal Architecture with a structure similar to 
 |------------|---------|------------------------------------|--------|
 | 2024-04-26 | 1.0     | Initial draft of document          | @minierparedes    |
 | 2024-04-30 | 1.1     | Creat C4 Model Diagrams            | @minierparedes    |
+| 2024-04-30 | 1.1     | Create API specification/project structure  | @minierparedes    |
