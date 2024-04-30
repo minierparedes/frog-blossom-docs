@@ -36,8 +36,8 @@ Rel_Neighbor(backend_api, database, "Reads/Writes", "sync, Go Database/SQL Packa
 Rel(web_app, backend_api, "Communicates with", "HTTPS/REST")
 
 
-Rel(backend_api, Docker, "Shares business logic with", "HTTP/REST")
-Rel(database, Docker, "Stores data in", "SQL")
+Rel(backend_api, Docker, "Containerized with", "Docker")
+Rel(database, Docker, "Containerized with", "Docker")
 Rel(Docker, Development, "Deployed to", "dev env", $tags="relation")
 Rel(Docker, Production, "Deployed to", "production env", $tags="relation")
 
