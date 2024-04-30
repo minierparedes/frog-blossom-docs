@@ -1,9 +1,9 @@
 @startuml frog-blossom-context
 !include  https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
-Person_Ext(user, "User")
+Person(user, "User")
 System(cms, "frog-blossom-cms")
 
-Rel(user, cms, "Create content")
+Rel(user, cms, "Create content", "https")
 
 @enduml
