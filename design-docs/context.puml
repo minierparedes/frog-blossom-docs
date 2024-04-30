@@ -4,6 +4,8 @@
 !define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
 !include DEVICONS/postgresql.puml
 !include FONTAWESOME/vuejs.puml
+!include FONTAWESOME/th.puml
+!include FONTAWESOME/users.puml
 
 
 
@@ -12,11 +14,12 @@ LAYOUT_WITH_LEGEND()
 title System Context diagram for Frog Blossom CMS (content management system) System
 
 Person(admin, "Frog Blossom CMS admin user", "admin user of the cms application, with administrative access.")
-Person(user, "Frog Blossom CMS user", "user of the cms application, with non-admin access.", person2)
-System(frog_blossom_cms_system, "CMS System", "Allows users to create, store, share, and reuse content in a consistent and organized manner.")
+Person(user, "Frog Blossom CMS user", "user of the cms application, with non-admin access.", $sprite="users")
+System(frog_blossom_cms_system, "CMS System", "Allows users to create, store, share, and reuse content in a consistent and organized manner.", $sprite="th")
 
 System_Ext(spa, "SPA", "vuejs", "The main interface that the user interacts with", $sprite="vuejs")
 System_Ext(cmsDB, "Frog Blossom CMS DB", "Stores all of the core information and content about users's accounts, content, etc.", $sprite="postgresql")
+
 
 Rel(admin, frog_blossom_cms_system, "Uses")
 Rel(admin, user, "Creates")
