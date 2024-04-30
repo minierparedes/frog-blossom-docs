@@ -14,7 +14,7 @@ Person(user, "CMS user", "user of the cms application, with non-admin access.", 
 System(frog_blossom_cms_system, "CMS System", "Allows users to  interact with the CMS application to create, manage, or view content.", $sprite="th")
 
 System_Ext(spa, "CMS Frontend", "The main interface that the user interacts with", $sprite="vuejs")
-System_Ext(cmsDB, "CMS DB Backend", "Stores all of the core information and content about users's accounts, content, etc.", $sprite="postgresql")
+System_Ext(cmsDB, "CMS Database", "Stores all of the core information and content about users's accounts, content, etc.", $sprite="postgresql")
 
 
 Rel(admin, spa, "Uses")
