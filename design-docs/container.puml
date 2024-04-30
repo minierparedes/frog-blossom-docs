@@ -1,8 +1,46 @@
 @startuml frog-blossom-container
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+!include DEVICONS/postgresql.puml
+!include FONTAWESOME/vuejs.puml
+!include FONTAWESOME/server.puml
+!include FONTAWESOME/docker.puml
+!include FONTAWESOME/th.puml
+!include FONTAWESOME/users.puml
+!include FONTAWESOME/hammer.puml
+!include FONTAWESOME/building.puml
+
+AddRelTag("relation", $lineStyle="dotted")
 
 title Container diagram for Frog Blossom CMS System
 
+Person(user, "CMS user", "user of the cms app, can create, edit and maintain content.", $sprite="users")
+
+System_Boundary(c1, "CMS application"){
+    Container(spa, "Single-Page App", "Nuxtjs, HTML, CSS, JS, sass", "Rendering user interfaces, handling client-side interactions, presenting content to users", $sprite="vuejs")
+    Container(web_app, "Web Application", "GO", "Hosts backend services, processes data, renders dynamic web pages", $sprite="th")
+    ContainerDb(database, "Database", "PostgreSQL Database", "Storing and managing content data, user information, hashed auth credentials, access logs, etc.", $sprite="postgresql")
+    Container(backend_api, "API Application", "GO Server", "Manages API endpoints, handles authentication and authorization, and ensures error handling and logging for the system.", $sprite="server")
+    Container(Docker, "Docker", "Containerization and Deployment", "The deployable containerization of its dependencies, libraries, and runtime environment of the backend system via API.", $sprite="docker")
+    
+}
+
+System_Ext(Production, "Production Environment", "Environment for running the production system", "Live production environment", $sprite="building")
+System_Ext(Development, "Development Environment", "Environment for development and testing", "Development and testing environment", $sprite="hammer")
+
+Rel(user, spa, "Interacts with", "Frontend Tech stack")
+Rel_Neighbor(spa, web_app, "Communicates with", "HTTP/REST")
+
+Rel_Neighbor(backend_api, database, "Reads/Writes", "sync, Go Database/SQL Package")
+Rel(web_app, backend_api, "Communicates with", "HTTPS/REST")
 
 
+Rel(backend_api, Docker, "Shares business logic with", "HTTP/REST")
+Rel(database, Docker, "Stores data in", "SQL")
+Rel(Docker, Development, "Deployed to", "dev env", $tags="relation")
+Rel(Docker, Production, "Deployed to", "production env", $tags="relation")
+
+
+SHOW_LEGEND(true)
 @enduml
