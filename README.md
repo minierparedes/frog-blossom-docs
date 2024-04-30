@@ -3,7 +3,7 @@
 web-based platform that allows users to create, manage, and publish digital content without needing extensive technical knowledge.
 Users can create and edit content through a user-friendly interface, and the system manages the storage, retrieval, and presentation of content on the website.
 
-## features
+## application features
 
 - content creation
 - editing
@@ -17,11 +17,12 @@ Users can create and edit content through a user-friendly interface, and the sys
 ## Table of contents
 
 - [Frog Blossom CMS](#frog-blossom-cms)
-  - [features](#features)
+  - [application features](#application-features)
   - [Table of contents](#table-of-contents)
     - [docs](#docs)
   - [Tech Stack](#tech-stack)
-  - [Architecture Layers of the project](#architecture-layers-of-the-project)
+  - [Application architecture](#application-architecture)
+    - [Project Structure](#project-structure)
   - [Running Locally](#running-locally)
     - [Run with Docker](#run-with-docker)
   - [Diagrams](#diagrams)
@@ -29,12 +30,12 @@ Users can create and edit content through a user-friendly interface, and the sys
     - [Container](#container)
     - [Revision History](#revision-history)
 
-
 ### docs
 
 1. [Application requirements](/frog-blossom-cms/application-requirements.md)
-2. [Design document](/design-docs/)
+2. [Design documents](/design-docs/)
 3. [Architectual plan](/design-docs/)
+4. [API specification](/design-docs/api-specification.md)
 
 ## Tech Stack
 
@@ -58,7 +59,42 @@ Container:
 
 ---
 
-## Architecture Layers of the project
+## Application architecture
+
+Go application following the Hexagonal Architecture with a structure similar to Spring Boot's layers
+
+### Project Structure
+
+```go
+
+📁 project-name
+  📁 cmd
+    📁 myapp
+      📄 main.go
+  📁 internal
+    📁 application
+      📄 service.go
+    📁 adapter
+      📁 inbound
+        📁 http
+          📄 handler.go (Equivalent to Controller)
+      📁 outbound
+        📁 persistence
+          📄 repository.go (Equivalent to Repository)
+    📁 domain
+      📄 model.go (Equivalent to Model)
+    📁 config
+      📄 appconfig.go
+```
+
+- `cmd`: Contains the main executable code (`main.go`) for the application.
+- `internal`: Contains internal packages/modules that are not intended to be used by external packages. This includes `application`, `adapter`, `domain`, and `config`.
+  - `application`: Contains business logic or services (`service.go`).
+  - `adapter`: Contains adapters for inbound and outbound communication.
+    - `inbound`: Contains adapters for handling incoming requests, such as HTTP handlers (`handler.go`, equivalent to Controller).
+    - `outbound`: Contains adapters for external systems, such as database repositories (`repository.go`, equivalent to Repository).
+  - `domain`: Contains domain-specific logic and models (`model.go`, equivalent to Model).
+  - `config`: Contains configuration files or structures (`appconfig.go`).
 
 ## Running Locally
 

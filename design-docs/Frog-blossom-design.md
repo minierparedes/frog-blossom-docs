@@ -1,5 +1,3 @@
----
-
 # Design Document: frog-blossom CMS
 
 ## 1. Introduction
@@ -8,17 +6,19 @@ Development for frog-blossom content management system (CMS) for managing articl
 
 ## 2. Architectural Overview
 
-The frog-blossom CMS will follow a Clean architecture microservice, with a single backend server responsible for handling HTTP requests, managing data storage, and serving content to users. The frontend will be implemented using Nuxtjs.
+The frog-blossom CMS will follow a Hexagonal architecture and microservice, with a single backend server responsible for handling HTTP requests, managing data storage, and serving content to users. The frontend will be implemented using Nuxtjs.
 
 ## 3. Functional Requirements
 
 ### 3.1 User Management
+
 - Users should register new accounts.
 - Users should log in to their accounts.
 - Users should update their profile information.
 - Admin users should manage user accounts (CRUD operations).
 
 ### 3.2 Content Management
+
 - Authenticated users should create new content.
 - Authenticated users should edit existing content.
 - Authenticated users should delete content they own.
@@ -32,12 +32,14 @@ The frog-blossom CMS will follow a Clean architecture microservice, with a singl
 ## 5. System Design
 
 ### 5.1 Backend
+
 - The backend will be implemented using GO.
 - Data storage will be handled using PostgresSQL.
 - Authentication will be implemented using JSON Web Tokens (JWT).
 - RESTful API endpoints will be exposed for user and content management.
 
 ### 5.2 Frontend
+
 - The frontend will be implemented using NuxtJs.
 - User interface components will be styled using CSS and Sass.
 - API requests will be made to the backend using Express.
@@ -45,12 +47,14 @@ The frog-blossom CMS will follow a Clean architecture microservice, with a singl
 ## 6. Data Model
 
 ### 6.1 User
+
 - `username: String (required)`
 - `email: String (required)`
 - `password: String (required, hashed)`
 - `role: String (default: "user" or "admin")`
 
 ### 6.2 Article
+
 - `title: String (required)`
 - `content: String (required)`
 - `author: ObjectId (referring to User)`
@@ -64,12 +68,7 @@ The frog-blossom CMS will follow a Clean architecture microservice, with a singl
 
 ## 8. API Specifications
 
-- `POST /api/auth/register`
-- `POST /api/auth/login`
-- `GET /api/auth/user (protected)`
-- `POST /api/articles (protected)`
-- `PUT /api/articles/:id (protected)`
-- `DELETE /api/articles/:id (protected)`
+[documentation](/design-docs/api-specification.md)
 
 ## 9. Security Considerations
 

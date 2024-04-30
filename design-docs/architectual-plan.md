@@ -1,15 +1,17 @@
-<p><a target="_blank" href="https://app.eraser.io/workspace/toYCWH32PtHug7boDCpu" id="edit-in-eraser-github-link"><img alt="Edit in Eraser" src="https://firebasestorage.googleapis.com/v0/b/second-petal-295822.appspot.com/o/images%2Fgithub%2FOpen%20in%20Eraser.svg?alt=media&amp;token=968381c8-a7e7-472a-8ed6-4a6626da5501"></a></p>
-
 # Frog Blossom CMS Architectual plan
-## 1. Introduction
-### 1.1 Purpose
-This document outlines the architectual plan for the minimun viable product (MVP) of the Frog Blossom CMS application. 
 
-It's intended for Dev team. 
+## 1. Introduction
+
+### 1.1 Purpose
+
+This document outlines the architectual plan for the minimun viable product (MVP) of the Frog Blossom CMS application.
+
+It's intended for Dev team.
 
 It is to be used as an initial guide for the development and future enhancements
 
 ### 1.2 Scope
+
 The scope of the Frog Blossom CMS Architectural Plan encompasses the following areas:
 
 - Core Functionality
@@ -21,53 +23,85 @@ The scope of the Frog Blossom CMS Architectural Plan encompasses the following a
 - User Experience
 - Scalability and Extensibility
 - Security
+
 ### 1.3 Definitions, Acronyms, and Abbreviations
+
 Provide definitions for any terms and acronyms used throughout the document.
 
 ### 1.4 References
+
 List any other documents, websites, or materials referenced in this document.
 
-- [﻿The Ultimate Guide to Headless CMS](https://www.enonic.com/headless-cms-ultimate-guide#challenges) 
-- [﻿Structured Content](https://www.enonic.com/blog/what-is-structured-content) 
-- [﻿Content Modeling 101](https://www.enonic.com/resources/guides/healthcare-content-modeling-101) 
-- [﻿Clean Architecture and DDD](https://medium.com/bimar-teknoloji/understanding-clean-architecture-and-domain-driven-design-ddd-24e89caabc40) 
-- [﻿Nuxt](https://nuxt.com/docs/getting-started/introduction) 
-- [﻿Expressjs](https://expressjs.com/) 
-- [﻿GO](https://go.dev/doc/) 
-- [﻿PostgresSQL](https://www.postgresql.org/docs/current/) 
-- [﻿Docker](https://docs.docker.com/) 
+- [The Ultimate Guide to Headless CMS](https://www.enonic.com/headless-cms-ultimate-guide#challenges)
+- [Structured Content](https://www.enonic.com/blog/what-is-structured-content)
+- [Content Modeling 101](https://www.enonic.com/resources/guides/healthcare-content-modeling-101)
+- [Hexagonal Architecture in Go](https://dev.to/bagashiz/building-restful-api-with-hexagonal-architecture-in-go-1mij)
+- [Nuxt](https://nuxt.com/docs/getting-started/introduction)
+- [Expressjs](https://expressjs.com/)
+- [GO](https://go.dev/doc/)
+- [PostgresSQL](https://www.postgresql.org/docs/current/)
+- [Docker](https://docs.docker.com/)
+
 ### 2. Architectural Representation
+
 #### 2.1 Architectural Style and Rationale
-**Architectural Style:** Clean Architecture and Microservices
+
+**Architectural Style:** Hexagonal architecture and Microservices
 
 **Rationale:**
 
-1. **Clean Architecture for Backend**:
-    - The choice of Clean Architecture for the backend is based on its effectiveness in promoting separation of concerns, maintainability, and testability of the codebase.
-    - Clean Architecture organizes the codebase into layers (Entities, Use Cases, Interface Adapters, and Frameworks/Drivers), with clear boundaries and dependencies flowing inward. 
+**Hexagonal architecture & Microservice for Backend**:
 
- This architectural style facilitates decoupling of business logic from external dependencies, such as databases, frameworks, and user interfaces.
-    - With Clean Architecture, the core business logic (Use Cases) is at the center of the architecture, independent of the infrastructure.
-2. **Microservices**:
-    - The choice of Microservices architecture complements Clean Architecture by providing a scalable approach to building distributed systems.
-    - Microservices architecture decomposes the system into a set of independently deployable services, each responsible for a specific business capability. 
+**Hexagonal:**
 
-This allows for better scalability, fault isolation, and flexibility in technology choice for individual services.
-    - By adopting a Microservices approach, we aim to address potential scalability and maintainability challenges, allowing for more efficient development, deployment, and management of the CMS application.
-    - Microservices architecture aligns with industry best practices and standards for building modern, cloud-native applications, making it a suitable choice for the Frog Blossom CMS application.
+1. **Consistent:** The Hexagonal architecture and Microservices approach ensure a consistent structure and design throughout the application, making it easier to maintain and enhance over time.
+
+2. **Easy to understand, navigate, and reason about:** The architecture's clear separation of concerns and modular design make it intuitive to comprehend, navigate, and reason about the codebase, facilitating efficient development and troubleshooting.
+
+3. **Easy to change, loosely-coupled:** By decoupling components and defining clear interfaces, the architecture allows for changes to be made in one part of the system without affecting others. This loose coupling enhances flexibility, enabling rapid adaptation to evolving requirements.
+
+4. **Easy to test:** The architecture's modularity and clear boundaries between components facilitate unit testing, integration testing, and end-to-end testing. This ease of testing ensures that the system's behavior can be verified reliably, leading to improved quality and stability of the application.
+
+**Microservices:**
+
+1. The choice of Microservices architecture complements Hexagonal Architecture by providing a scalable approach to building distributed systems.
+
+2. Microservices architecture decomposes the system into a set of independently deployable services, each responsible for a specific business capability.
+
+### Hexagonal architecture layer structure:
+
+- **Domain Layer:** Contains the core business logic and domain models.
+- **Application Layer:** Orchestrates use cases and interacts with the domain layer.
+- **Infrastructure Layer:** Provides implementations for external dependencies.
+- **Interface Layer:** Defines interfaces for external communication.
+
+1. **Domain Layer:** This layer contains the core business logic and domain models of the application. It defines the entities, value objects, business rules, and domain services that represent the business domain.
+
+2. **Application Layer:** Also known as the use case layer, this layer orchestrates the interactions between the domain layer and the external interfaces (such as HTTP handlers or CLI commands). It contains the application-specific use cases or operations that are performed by the system.
+
+3. **Infrastructure Layer:** This layer provides implementations for external dependencies and interfaces required by the application, such as databases, external services, or frameworks. It includes repositories, adapters, and drivers that interact with external systems.
+
+4. **Interface Layer:** This layer defines the interfaces through which the application communicates with external systems or users. It includes handlers, controllers, or CLI interfaces that translate incoming requests into application use cases and outgoing responses.
+
 ## 3. System Stakeholders and Concerns
+
 ### 3.1 Stakeholders
+
 Dev team:
 
-- [﻿sharray2918](https://github.com/sharray2918) 
-- [﻿minierparedes](https://github.com/minierparedes) 
+- [sharray2918](https://github.com/sharray2918)
+- [minierparedes](https://github.com/minierparedes)
+
 ## 4. System Overview
+
 ### 4.1 High-Level Description
+
 The Frog Blossom CMS is a content management system designed to empower users to create, manage, and publish digital content effectively.
 
 At its core, the system provides a user-friendly interface for content creation, organization, and publication, catering to the needs of content creators, editors, administrators, and website visitors.
 
 #### Functionality
+
 1. **Content Creation and Editing**:
     - Users can create various types of content, including articles, blog posts, pages, and multimedia content.
     - Content creation interfaces support rich text formatting, media embedding, and metadata management.
@@ -88,29 +122,31 @@ At its core, the system provides a user-friendly interface for content creation,
 7. **SEO Optimization**:
     - Users can optimize content for search engines by setting metadata, such as titles, descriptions, and keywords, for each piece of content.
     - Clean URLs, canonical tags, and SEO-friendly markup are employed to improve search engine rankings and visibility.
+
 #### Components
+
 1. **Frontend**:
     - The frontend component provides an interface for interacting with the CMS, allowing users to create, edit, and manage content.
 2. **Backend**:
     - The backend component implements the core business logic of the CMS, including content management, user authentication, and access control.
 3. **Database**:
     - The database component stores and manages content data, user information, and system configurations.
-4. **Media Storage**:
-    - Media files uploaded by users are stored in a dedicated storage component, such as a file system or cloud storage service, for efficient retrieval and management.
-5. **Search Engine**:
+4. **Search Engine**?[optional/Elastic Search]:
     - A search engine component indexes and searches content to provide users with fast and relevant search results.
     - Full-text search capabilities and faceted search options may be implemented to enhance search functionality.
+
 ## 5. Architectural Strategies
+
 ### 5.1 Key Strategies
+
 The Frog Blossom CMS application adopts several key architectural strategies to address specific stakeholder concerns and achieve the desired system objectives.
 
 - Frontend: Nuxt, expressjs, css, sass
 - Backend: GO, Docker
 - Database: Postgressql
+
 1. **Modularization and Separation of Concerns**:
-    - **Strategy**: The system is designed using Clean Architecture principles, which promote modularization and separation of concerns. Each component of the system (Entities, Use Cases, Interface Adapters, and Frameworks/Drivers) has well-defined responsibilities and boundaries, allowing for easy maintenance, scalability, and testability.
-    - **Addressing Stakeholder Concerns**:
-        - **Developers**: Clear separation of concerns facilitates code maintenance, reduces complexity, and promotes code reuse, enhancing developer productivity.
+    - **Strategy**: The system is designed using Hexagonal architecture principles, which promote modularization and separation of concerns. Each component of the system (Domain Layer, Application Layer, Infrastructure Layer, and Interface Layer) has well-defined responsibilities and boundaries, allowing for easy maintenance, scalability, and testability.
 2. **Microservices Architecture**:
     - **Strategy**: The system adopts a Microservices architecture, decomposing complex functionalities into smaller, independently deployable services. Each microservice is responsible for a specific business capability, enabling scalability, fault isolation, and technological flexibility.
     - **Addressing Stakeholder Concerns**:
@@ -121,14 +157,18 @@ The Frog Blossom CMS application adopts several key architectural strategies to 
         - **Developers**: Containerization streamlines the development and deployment process, providing consistency across different environments (development, testing, production). It also facilitates continuous integration and continuous deployment (CI/CD) pipelines, enabling faster delivery of features and updates.
 4. **Security by Design**:
     - **Strategy**: Security considerations are embedded into the architecture and design of the system from the outset. Security best practices, such as encryption, authentication, authorization, and data validation, are implemented at every layer of the application to protect against unauthorized access, data breaches, and other security threats.
+
 ## 6. System Architecture
+
 ### 6.1 Overview of Layers/Modules
+
 Front-End Layer: Handles the user interface and client-side logic.
 Back-End Layer: Manages server-side logic, API requests, and database interactions.
 Database Layer: Stores and retrieves all application data.
 
 ### Backend
-The Frog Blossom CMS application is structured using Clean Architecture principles the following is an overview of the system's layers/modules:
+
+The Frog Blossom CMS application is structured using Hexagonal architecture principles the following is an overview of the system's layers/modules:
 
 1. **Entities Layer**:
     - The Entities layer represents the core domain models and business entities of the system.
@@ -149,17 +189,21 @@ The Frog Blossom CMS application is structured using Clean Architecture principl
     - Frameworks and drivers provide essential services and resources needed to run the application, such as web servers, databases, logging frameworks, authentication libraries, etc.
     - Frameworks/drivers encapsulate implementation details and infrastructure dependencies, allowing the application to remain agnostic to specific technologies.
     - Examples of frameworks/drivers include Spring Boot, Hibernate, PostgreSQL, Docker, Kubernetes, etc.
+
 The modular architecture of the Frog Blossom CMS application facilitates loose coupling, high cohesion, and ease of maintenance. Each layer/module has well-defined responsibilities and dependencies, enabling independent development, testing, and deployment of components.
+
+### Frontend
+
+- PENDING
 
 ### 6.2 Component Diagrams
 
-
-
-
-[﻿View on canvas](https://app.eraser.io/workspace/toYCWH32PtHug7boDCpu?elements=uLJZYCk-993brxu0T6YIeQ) 
+[View on canvas](https://app.eraser.io/workspace/toYCWH32PtHug7boDCpu?elements=uLJZYCk-993brxu0T6YIeQ)
 
 ### 6.3 Database Design
+
 #### Database Tables
+
 1. **Users Table**:
     - Stores user information such as username, email, password (hashed), role, and permissions.
     - Primary Key: user_id
@@ -188,45 +232,33 @@ The modular architecture of the Frog Blossom CMS application facilitates loose c
     - Represents a many-to-many relationship between content items and tags.
     - Associates content items with one or more tags.
     - Foreign Keys: content_id (references Content table), tag_id (references Tags table)
+
 #### Database Relationships
+
 - One-to-Many Relationship:
-    - Users can have multiple content items (articles, blog posts, etc.).
-    - Categories can have multiple content items.
-    - Tags can be associated with multiple content items.
+  - Users can have multiple content items (articles, blog posts, etc.).
+  - Categories can have multiple content items.
+  - Tags can be associated with multiple content items.
 - Many-to-Many Relationship:
-    - Content items can belong to multiple categories.
-    - Content items can have multiple tags.
+  - Content items can belong to multiple categories.
+  - Content items can have multiple tags.
+
 #### Database Indexes
+
 - Indexes can be added on frequently queried columns such as username, email, category name, tag name, etc., to optimize query performance.
+
 #### Database Constraints
+
 - Foreign key constraints ensure data integrity by enforcing referential integrity between related tables.
 - Check constraints can be applied to ensure data validity and consistency (e.g., ensuring publication date is not in the future).
-## 7. Quality Attributes
-### 7.1 Performance
-Describe the performance requirements and how the architecture supports them.
 
-### 7.2 Scalability
-Discuss scalability considerations and strategies.
+## 7. Appendices
 
-### 7.3 Security
-Outline the security measures and considerations within the architecture.
+### 7.1 Revision History
 
-### 7.4 Maintainability
-Discuss how the system is designed for ease of maintenance.
-
-## 8. Appendices
-### 8.1 Revision History
 ### Revision History
+
 | Date | Version | Description of Changes | Author |
 | ----- | ----- | ----- | ----- |
-| 2024-04-26 | 1.0 | Initial draft of document |  |
-
-
-
-<!-- eraser-additional-content -->
-## Diagrams
-<!-- eraser-additional-files -->
-<a href="/design-docs/architectual-plan-Content Management System Database-1.eraserdiagram" data-element-id="AzAnbyYW-0DGAYGTpLlNP"><img src="/.eraser/toYCWH32PtHug7boDCpu___mfsybget2bYmZJj1SMRIdLoEljx1___---diagram----9c1236eec987f9bb2b84c4b6c6871965-Content-Management-System-Database.png" alt="" data-element-id="AzAnbyYW-0DGAYGTpLlNP" /></a>
-<!-- end-eraser-additional-files -->
-<!-- end-eraser-additional-content -->
-<!--- Eraser file: https://app.eraser.io/workspace/toYCWH32PtHug7boDCpu --->
+| 2024-04-26 | 1.0 | Initial draft of document | @minierparedes   |
+| 2024-04-30 | 1.1   | chage to hexagonal architecture | @minierparedes   |
