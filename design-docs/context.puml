@@ -8,6 +8,10 @@
 !include DEVICONS/msql_server.puml
 !include FONTAWESOME/users.puml
 
+!include ../devicons/mysql.puml
+!include ../font-awesome/database.puml
+!include ../font-awesome-5/database.puml
+
 
 LAYOUT_WITH_LEGEND()
 
