@@ -4,7 +4,7 @@
 Person(admin, "Admin")
 System(cms, "frog-blossom-cms")
 
-Person(user, "User")
+Person(user, "User", person2)
 System(cms, "frog-blossom-cms")
 
 
