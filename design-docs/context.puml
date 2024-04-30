@@ -4,14 +4,16 @@
 Person(admin, "Admin")
 System(cms, "frog-blossom-cms")
 
-Rel(admin, user, "Create user", "https")
+Person(user, "User")
+System(cms, "frog-blossom-cms")
+
+Rel(admin, cms, "Create user", "https")
 Rel(admin, cms, "Create content", "https")
 Rel(admin, cms, "Update content", "https")
 Rel(admin, cms, "Read content", "https")
 
 
-Person(user, "User")
-System(cms, "frog-blossom-cms")
+
 
 Rel(user, cms, "Create content", "https")
 Rel(user, cms, "Update content", "https")
