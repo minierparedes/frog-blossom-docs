@@ -1,10 +1,12 @@
 @startuml frog-blossom-context
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
+LAYOUT_WITH_LEGEND()
+
 Person(admin, "Admin")
 System(cms, "frog-blossom-cms")
 
-Person(user, "User", person2)
+Person(user, "User", person2, person2)
 System(cms, "frog-blossom-cms")
 
 
@@ -20,5 +22,4 @@ Rel(user, cms, "Create content", "https")
 Rel(user, cms, "Update content", "https")
 Rel(user, cms, "Read content", "https")
 
-SHOW_LEGEND(true)
 @enduml
