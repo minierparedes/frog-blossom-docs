@@ -15,7 +15,7 @@ AddRelTag("relation", $lineStyle="dotted")
 
 title Container diagram for Frog Blossom CMS System
 
-Person(admin, "CMS admin user", "user of the cms app, can create, edit and maintain content.")
+Person(admin, "CMS admin user", "admin user of the cms app, can create users, can delete users, can create, edit and maintain content.")
 Person(user, "CMS user", "user of the cms app, can create, edit and maintain content.", $sprite="users")
 
 
