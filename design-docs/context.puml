@@ -5,5 +5,8 @@ Person(user, "User")
 System(cms, "frog-blossom-cms")
 
 Rel(user, cms, "Create content", "https")
+Rel(user, cms, "Update content", "https")
+Rel(user, cms, "Read content", "https")
+
 
 @enduml
