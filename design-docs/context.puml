@@ -1,25 +1,21 @@
 @startuml frog-blossom-context
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+
 LAYOUT_WITH_LEGEND()
 
-Person(admin, "Admin")
-System(cms, "frog-blossom-cms")
+title System Context diagram for Frog Blossom CMS (content management system) System
 
-Person(user, "User", person2, person2)
-System(cms, "frog-blossom-cms")
+Person(admin, "Frog Blossom CMS admin user", "admin user of the cms application, with administrative access.")
+Person(user, "Frog Blossom CMS user", "user of the cms application, with non-admin access.", person2)
+System(frog_blossom_cms_system, "CMS System", "Allows users to create, store, share, and reuse content in a consistent and organized manner.")
 
+System_Ext(cmsDB, "Frog Blossom CMS DB", "Stores all of the core information and content about users's accounts, content, etc.")
 
-Rel(admin, user, "Create user", "https")
-Rel(admin, user, "Update user", "https")
-Rel(admin, user, "Delete user", "https")
-Rel(admin, cms, "Create content", "https")
-Rel(admin, cms, "Update content", "https")
-Rel(admin, cms, "Read content", "https")
-Rel(admin, cms, "Delete content", "https")
-
-Rel(user, cms, "Create content", "https")
-Rel(user, cms, "Update content", "https")
-Rel(user, cms, "Read content", "https")
+Rel(admin, frog_blossom_cms_system, "Uses")
+Rel(admin, user, "Creates")
+Rel(user, frog_blossom_cms_system, "Uses")
 
 @enduml
