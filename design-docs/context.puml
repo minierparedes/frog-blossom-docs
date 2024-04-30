@@ -3,6 +3,7 @@
 
 !define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
 !define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+!include DEVICONS/vuejs_wordmark.puml
 
 LAYOUT_WITH_LEGEND()
 
