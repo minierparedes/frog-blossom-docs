@@ -9,20 +9,22 @@
 
 
 
-LAYOUT_WITH_LEGEND()
+SHOW_LEGEND(true)
 
 title System Context diagram for Frog Blossom CMS (content management system) System
 
-Person(admin, "Frog Blossom CMS admin user", "admin user of the cms application, with administrative access.")
-Person(user, "Frog Blossom CMS user", "user of the cms application, with non-admin access.", $sprite="users")
+Person(admin, "CMS admin user", "admin user of the cms application, with administrative access.")
+Person(user, "CMS user", "user of the cms application, with non-admin access.", $sprite="users")
 System(frog_blossom_cms_system, "CMS System", "Allows users to create, store, share, and reuse content in a consistent and organized manner.", $sprite="th")
 
-System_Ext(spa, "SPA", "vuejs", "The main interface that the user interacts with", $sprite="vuejs")
-System_Ext(cmsDB, "Frog Blossom CMS DB", "Stores all of the core information and content about users's accounts, content, etc.", $sprite="postgresql")
+System_Ext(spa, "CMS Frontend", "The main interface that the user interacts with", $sprite="vuejs")
+System_Ext(cmsDB, "CMS DB Backend", "Stores all of the core information and content about users's accounts, content, etc.", $sprite="postgresql")
 
 
-Rel(admin, frog_blossom_cms_system, "Uses")
+Rel(admin, spa, "Uses")
 Rel(admin, user, "Creates")
-Rel(user, frog_blossom_cms_system, "Uses")
+Rel(user, spa, "Uses")
+Rel(spa, frog_blossom_cms_system, "Uses")
+Rel(frog_blossom_cms_system, cmsDB, "Uses")
 
 @enduml
