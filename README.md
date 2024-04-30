@@ -72,7 +72,7 @@ Container:
 
 ### Container
 
-![container diagram](/design-docs/container-diagram.png)
+![container diagram](/design-docs/containers-diagram.png)
 
 ### Revision History
 
