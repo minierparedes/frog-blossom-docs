@@ -79,3 +79,4 @@ Container:
 | Date       | Version | Description of Changes              | Author |
 |------------|---------|------------------------------------|--------|
 | 2024-04-26 | 1.0     | Initial draft of document          | @minierparedes    |
+| 2024-04-30 | 1.1     | Creat C4 Model Diagrams            | @minierparedes    |
