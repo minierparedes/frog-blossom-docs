@@ -7,7 +7,7 @@
 !include DEVICONS/java.puml
 !include DEVICONS/msql_server.puml
 !include FONTAWESOME/users.puml
-!includeurl ICONURL/font-awesome-5/vuejs_wordmark.puml
+
 
 LAYOUT_WITH_LEGEND()
 
