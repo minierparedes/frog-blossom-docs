@@ -15,7 +15,9 @@ AddRelTag("relation", $lineStyle="dotted")
 
 title Container diagram for Frog Blossom CMS System
 
+Person(admin, "CMS admin user", "user of the cms app, can create, edit and maintain content.")
 Person(user, "CMS user", "user of the cms app, can create, edit and maintain content.", $sprite="users")
+
 
 System_Boundary(c1, "CMS application"){
     Container(spa, "Single-Page App", "Nuxtjs, HTML, CSS, JS, sass", "Rendering user interfaces, handling client-side interactions, presenting content to users", $sprite="vuejs")
@@ -30,6 +32,8 @@ System_Ext(Production, "Production Environment", "Environment for running the pr
 System_Ext(Development, "Development Environment", "Environment for development and testing", "Development and testing environment", $sprite="hammer")
 
 Rel(user, spa, "Interacts with", "Frontend Tech stack")
+Rel(admin, spa, "Interacts with", "Frontend Tech stack")
+Rel_Neighbor(admin, user, "Manages", "User Management")
 Rel_Neighbor(spa, web_app, "Communicates with", "HTTP/REST")
 
 Rel_Neighbor(backend_api, database, "Reads/Writes", "sync, Go Database/SQL Package")
