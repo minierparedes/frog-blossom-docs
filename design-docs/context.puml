@@ -1,5 +1,5 @@
 @startuml frog-blossom-context
-!include  https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
 Person(admin, "Admin")
 System(cms, "frog-blossom-cms")
@@ -7,17 +7,18 @@ System(cms, "frog-blossom-cms")
 Person(user, "User")
 System(cms, "frog-blossom-cms")
 
-Rel(admin, cms, "Create user", "https")
+
+Rel(admin, user, "Create user", "https")
+Rel(admin, user, "Update user", "https")
+Rel(admin, user, "Delete user", "https")
 Rel(admin, cms, "Create content", "https")
 Rel(admin, cms, "Update content", "https")
 Rel(admin, cms, "Read content", "https")
-
-
-
+Rel(admin, cms, "Delete content", "https")
 
 Rel(user, cms, "Create content", "https")
 Rel(user, cms, "Update content", "https")
 Rel(user, cms, "Read content", "https")
 
-
+SHOW_LEGEND(true)
 @enduml
