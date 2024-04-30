@@ -65,27 +65,29 @@ Go application following the Hexagonal Architecture with a structure similar to 
 
 ### Project Structure
 
-```go
-
-📁 project-name
-  📁 cmd
-    📁 myapp
-      📄 main.go
-  📁 internal
-    📁 application
-      📄 service.go
-    📁 adapter
-      📁 inbound
-        📁 http
-          📄 handler.go (Equivalent to Controller)
-      📁 outbound
-        📁 persistence
-          📄 repository.go (Equivalent to Repository)
-    📁 domain
-      📄 model.go (Equivalent to Model)
-    📁 config
-      📄 appconfig.go
+```bash
+├── cmd
+│   └── main.go
+├── internal
+│   ├── application
+│   │   ├── service.go
+│   ├── adapter
+│   │   ├── inbound
+│   │   │   ├── http
+│   │   │   │   └── handler.go (Equivalent to Controller)
+│   │   ├── outbound
+│   │   │   └── persistence
+│   │   │       └── repository.go (Equivalent to Repository)
+│   ├── domain
+│   │   └── model.go (Equivalent to Model)
+│   └── config
+│       └── appconfig.go
+└── test
+    ├── unit_tests
+    └── end_to_end_tests
 ```
+
+In this structure:
 
 - `cmd`: Contains the main executable code (`main.go`) for the application.
 - `internal`: Contains internal packages/modules that are not intended to be used by external packages. This includes `application`, `adapter`, `domain`, and `config`.
@@ -95,6 +97,9 @@ Go application following the Hexagonal Architecture with a structure similar to 
     - `outbound`: Contains adapters for external systems, such as database repositories (`repository.go`, equivalent to Repository).
   - `domain`: Contains domain-specific logic and models (`model.go`, equivalent to Model).
   - `config`: Contains configuration files or structures (`appconfig.go`).
+- `test`: Contains test-related code, including unit tests, integration tests, and test utilities.
+  - `unit_tests`: Testing individual components or units of code in isolation.
+  - `end_to_end_tests`: Testing the application's behavior across multiple components or systems. Tests user scenarios and interactions with the entire application.
 
 ## Running Locally
 

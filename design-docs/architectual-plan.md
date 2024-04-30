@@ -36,6 +36,8 @@ List any other documents, websites, or materials referenced in this document.
 - [Structured Content](https://www.enonic.com/blog/what-is-structured-content)
 - [Content Modeling 101](https://www.enonic.com/resources/guides/healthcare-content-modeling-101)
 - [Hexagonal Architecture in Go](https://dev.to/bagashiz/building-restful-api-with-hexagonal-architecture-in-go-1mij)
+- [Github: Hexagonal Architecture in Go](https://github.com/felipewom/go-hexagonal)
+- [Github: go-hexagonal-api](https://github.com/sergicanet9/go-hexagonal-api)
 - [Nuxt](https://nuxt.com/docs/getting-started/introduction)
 - [Expressjs](https://expressjs.com/)
 - [GO](https://go.dev/doc/)
