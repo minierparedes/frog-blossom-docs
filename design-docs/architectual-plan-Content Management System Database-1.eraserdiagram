@@ -1,0 +1,61 @@
+entity-relationship-diagram
+
+title Content Management System Database
+// define tables
+users [icon: user, color: blue]{
+  id string pk
+  username string
+  email string
+  password string
+  role string
+  permissions string
+}
+
+content [icon: file-text, color: green]{
+  id string pk
+  title string
+  body string
+  author_id string fk
+  publication_date timestamp
+  status string
+  category string
+  tags string
+}
+
+categories [icon: folder, color: orange]{
+  id string pk
+  name string
+  description string
+}
+
+tags [icon: tag, color: purple]{
+  id string pk
+  name string
+  description string
+}
+
+media_files [icon: image, color: grey]{
+  id string pk
+  file_name string
+  file_type string
+  file_size integer
+  upload_date timestamp
+}
+
+categories_content [icon: layers, color: red]{
+  content_id string fk
+  category_id string fk
+}
+
+tags_content [icon: bookmark, color: yellow]{
+  content_id string fk
+  tag_id string fk
+}
+// End of tables
+// Relationships
+users.id > content.author_id
+content.id <> categories_content.content_id
+categories_content.category_id <> categories.id
+content.id <> tags_content.content_id
+tags_content.tag_id <> tags.id
+
