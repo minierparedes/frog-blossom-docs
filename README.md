@@ -1,25 +1,49 @@
 # Frog Blossom CMS
 
-<img src="image.png" alt="frog-blossom" style="display:block; margin:auto; width:50%;">
+<img src="image.png" alt="frog-blossom" style="display: block; margin:auto; width:50%;">
 
-web-based platform that allows users to create, manage, and publish digital content without needing extensive technical knowledge.
-Users can create and edit content through a user-friendly interface, and the system manages the storage, retrieval, and presentation of content on the website.
+A web-based CMS (content management system) system that allows users to create websites, manage, and publish digital content without needing extensive technical knowledge.
+Users can create websites and edit content through a user-friendly interface, and the system manages the storage, retrieval, and presentation of content on the website.
 
-## application features
+## Application Features
 
-- content creation
-- editing
-- organization
-- and publishing
-- user management
-- user authentication
+### Website Creation
+
+- Website builder
+- Interface
+  - Contact form (curretly one, plans on creating several types of forms)
+- Page
+  - included meta tags
+- Templates
+- Flexible layout options
+
+### Content Management
+
+- Content creation
+  - article
+    - included meta tags
+  - categories
+  - author
+    - for meta `<meta name="author" content="John Doe">`
+- Editing
+- Organization
+- Publishing
+
+### User Management
+
+- User authentication
+- User roles and permissions
+- Account management
 
 ---
 
 ## Table of contents
 
 - [Frog Blossom CMS](#frog-blossom-cms)
-  - [application features](#application-features)
+  - [Application Features](#application-features)
+    - [Website Creation](#website-creation)
+    - [Content Management](#content-management)
+    - [User Management](#user-management)
   - [Table of contents](#table-of-contents)
     - [docs](#docs)
   - [Tech Stack](#tech-stack)
@@ -36,8 +60,7 @@ Users can create and edit content through a user-friendly interface, and the sys
 
 1. [Application requirements](/frog-blossom-cms/application-requirements.md)
 2. [Design documents](/design-docs/)
-3. [Architectual plan](/design-docs/)
-4. [API specification](/design-docs/api-specification.md)
+3. [API specification](/design-docs/api-specification.md)
 
 ## Tech Stack
 

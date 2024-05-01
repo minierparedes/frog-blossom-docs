@@ -10,19 +10,28 @@ The frog-blossom CMS will follow a Hexagonal architecture and microservice, with
 
 ## 3. Functional Requirements
 
-### 3.1 User Management
+### 3.1 Website Management
+
+- Users can create new websites.
+- Users can select and customize website templates.
+- Users can customize website layouts.
+- Users can integrate content into their websites.
+- Users can manage domain settings.
+- Users can optimize websites for SEO.
+
+### 3.2 User Management
 
 - Users should register new accounts.
 - Users should log in to their accounts.
 - Users should update their profile information.
 - Admin users should manage user accounts (CRUD operations).
 
-### 3.2 Content Management
+### 3.3 Content Management
 
-- Authenticated users should create new content.
-- Authenticated users should edit existing content.
-- Authenticated users should delete content they own.
-- Admin users should to manage all content (CRUD operations).
+- Authenticated users can create new content.
+- Authenticated users can edit existing content.
+- Authenticated users can delete content they own.
+- Admin users can manage all content (CRUD operations).
 
 ## 4. Non-Functional Requirements
 
@@ -46,18 +55,36 @@ The frog-blossom CMS will follow a Hexagonal architecture and microservice, with
 
 ## 6. Data Model
 
-### 6.1 User
+simplified!!
+
+### 6.1 Website
+
+- `name: String (required)`
+- `domain: String (required)`
+- `owner_id: String (required)`
+- `password: String`
+- `template_id: String`
+- `pages: Array`
+  - `page_id: String`
+  - `title: String`
+  - `content: String`
+  - `url: String`
+
+### 6.2 User
 
 - `username: String (required)`
 - `email: String (required)`
 - `password: String (required, hashed)`
 - `role: String (default: "user" or "admin")`
 
-### 6.2 Article
+### 6.3 Content
 
 - `title: String (required)`
-- `content: String (required)`
+- `content: Object (required)`
 - `author: ObjectId (referring to User)`
+- `meta_tags: Array`
+  - `name: String`
+  - `content: String`
 - `createdAt: Date (default: current timestamp)`
 - `updatedAt: Date`
 
@@ -93,3 +120,4 @@ The frog-blossom CMS will follow a Hexagonal architecture and microservice, with
 | Date       | Version | Description of Changes              | Author |
 |------------|---------|------------------------------------|--------|
 | 2024-04-26 | 1.0     | Initial draft of document          | @minierparedes    |
+| 2024-05-01 | 1.1     | Added data model management section| @minierparedes     |
