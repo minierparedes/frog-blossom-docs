@@ -70,7 +70,7 @@ List any other documents, websites, or materials referenced in this document.
 
 2. Microservices architecture decomposes the system into a set of independently deployable services, each responsible for a specific business capability.
 
-### Hexagonal architecture layer structure:
+### Hexagonal architecture layer structure
 
 - **Domain Layer:** Contains the core business logic and domain models.
 - **Application Layer:** Orchestrates use cases and interacts with the domain layer.
@@ -104,26 +104,49 @@ At its core, the system provides a user-friendly interface for content creation,
 
 #### Functionality
 
-1. **Content Creation and Editing**:
-    - Users can create various types of content, including articles, blog posts, pages, and multimedia content.
-    - Content creation interfaces support rich text formatting, media embedding, and metadata management.
-2. **Content Management**:
-    - Content is organized using categories, tags, and custom taxonomies for easy navigation and retrieval.
-    - Users can search, filter, and sort content based on criteria such as publication date, author, and topic.
-3. **Media Management**:
-    - Users can upload, store, and manage media files, such as images, videos, and documents, within the system.
-    - Media files can be embedded into content and reused across multiple pages or posts.
-4. **Version Control and Revision History**:
-    - The system maintains a revision history of content changes, allowing users to track and revert to previous versions if needed.
-    - Version control mechanisms ensure data integrity and facilitate collaboration among multiple users.
-5. **Publishing Workflow**:
-    - Users can schedule content publication, preview changes before publishing, and collaborate on content creation and review.
-    - Role-based access control allows administrators to define user roles and permissions for content publishing and management.
-6. **User Management**:
-    - The system supports user registration, authentication, and role-based access control, allowing administrators to manage user accounts and permissions.
-7. **SEO Optimization**:
-    - Users can optimize content for search engines by setting metadata, such as titles, descriptions, and keywords, for each piece of content.
-    - Clean URLs, canonical tags, and SEO-friendly markup are employed to improve search engine rankings and visibility.
+1. **Website Creation and Management:**
+
+- Users can create new websites.
+- Users can choose from a variety of templates for their websites.
+- Users can customize the layout, design, and content of their websites.
+- Websites can include pages, such as home, about, contact, etc.
+- Users can manage multiple websites from a single dashboard.
+- Users can enable features like contact forms, user registration, etc., on their websites.
+- Admin users can manage website settings and permissions.
+
+2. **Content Creation and Editing**:
+
+- Users can create various types of content, including articles, blog posts, pages, and multimedia content.
+- Content creation interfaces support rich text formatting, media embedding, and metadata management.
+
+3. **Content Management**:
+
+- Content is organized using categories, tags, and custom taxonomies for easy navigation and retrieval.
+- Users can search, filter, and sort content based on criteria such as publication date, author, and topic.
+
+4. **Media Management**:
+
+- Users can upload, store, and manage media files, such as images, videos, and documents, within the system.
+- Media files can be embedded into content and reused across multiple pages or posts.
+
+5. **Version Control and Revision History**:
+
+- The system maintains a revision history of content changes, allowing users to track and revert to previous versions if needed.
+- Version control mechanisms ensure data integrity and facilitate collaboration among multiple users.
+
+6. **Publishing Workflow**:
+
+- Users can schedule content publication, preview changes before publishing, and collaborate on content creation and review.
+- Role-based access control allows administrators to define user roles and permissions for content publishing and management.
+
+1. **User Management**:
+
+- The system supports user registration, authentication, and role-based access control, allowing administrators to manage user accounts and permissions.
+
+1. **SEO Optimization**:
+
+- Users can optimize content for search engines by setting metadata, such as titles, descriptions, and keywords, for each piece of content.
+- Clean URLs, canonical tags, and SEO-friendly markup are employed to improve search engine rankings and visibility.
 
 #### Components
 
