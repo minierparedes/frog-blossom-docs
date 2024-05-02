@@ -161,7 +161,7 @@ Table form_fields {
   required boolean [not null]
 }
 
-Table templates {
+Table template_list {
   id bigserial [primary key, unique, not null] // Auto-incrementing unique ID
   name varchar(255) [not null]
   preview_image_url varchar(255) [not null]
