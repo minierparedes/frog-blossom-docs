@@ -1,6 +1,10 @@
 # DATABASE DESIGN
 
-• Design DB schema
+Design and schema for frog-blossom DB
+
+• [DB schema editor](https://dbdiagram.io/d/Frog-Blossom-CMS-6631d2725b24a634d039d318)
+
+
 
 ## 6. Data Model
 

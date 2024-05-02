@@ -148,3 +148,4 @@ In this structure:
 | 2024-04-30 | 1.1     | Creat C4 Model Diagrams            | @minierparedes    |
 | 2024-04-30 | 1.1     | Create API specification/project structure  | @minierparedes    |
 | 2024-05-01 | 1.2     | TODO: [website creation: static vs SPA](https://reflectionizm.slack.com/archives/D06FJ2S89FC/p1714530340845169)  | @minierparedes    |
+| 2024-05-01 | 1.2     | TODO: C4 Model Diagrams: sequence | @minierparedes    |
