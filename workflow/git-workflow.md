@@ -30,7 +30,13 @@ The idea is based on [github flow](https://docs.github.com/en/get-started/using-
 
 ## Workflow
 
+### Backend
+
 <img src='./images/frog-blossom-cms-gitflow-be.drawio.png' />
+
+### Frontend
+
+<!-- later-->
 
 ## Versioning
 
