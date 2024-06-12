@@ -22,7 +22,7 @@ Developing new features and refactoring codes. Usually, the branch has its featu
 
 ### hotfix branch
 
-Fixing critical bugs in the production environment. This branch is allowed to merge the dev branch. However, it needs to pass the testing.
+Fixing critical bugs in the production environment. This branch is allowed to merge the main branch directly if it needed. However, it needs to pass the testing.
 
 ---
 
