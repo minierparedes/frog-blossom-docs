@@ -38,6 +38,10 @@ The idea is based on [github flow](https://docs.github.com/en/get-started/using-
 
 <img src='./images/frog-blossom-cms-gitflow-be.drawio.png' />
 
+*Workflow diagram*
+
+#### Basic workflow
+
 1. Create a new feature branch from the `dev` branch on your PC.
 2. Work for a specific purpose in the local branch.
 3. Create a Pull request in Github.
@@ -45,6 +49,14 @@ The idea is based on [github flow](https://docs.github.com/en/get-started/using-
 5. Get **Approve** to merge. When a reviewer gives you a **Request change**, you should fix what is pointed our by reviewers.
 6. Merge pull request to the base branch which is basically the `dev` branch.
 7. Do again from No.1 until the app will be able to published.
+
+#### Hotfix workflow
+
+<!-- later -->
+
+#### Deployment
+
+<!-- later -->
 
 ### Naming convention for branches
 
